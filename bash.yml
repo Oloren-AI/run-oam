@@ -1,0 +1,5 @@
+bash:
+  image: oam-release:latest
+  volumes:
+    - ".:/home/workspace"
+  working_dir: /home/workspace

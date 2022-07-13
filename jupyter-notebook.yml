@@ -1,0 +1,10 @@
+jupyter:
+  image: oam-release:latest
+  ports:
+    - 1235:1235
+  volumes:
+    - ".:/home/notebook"
+  command: >
+    bash -c "pip install jupyter
+    && cd /home/notebook
+    && jupyter notebook --port=1235 --allow-root --no-browser --ip='*'"
