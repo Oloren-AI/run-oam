@@ -1,0 +1,8 @@
+docs:
+  image: oam-release:docs
+  ports:
+    - 1235:1235
+  volumes:
+    - ".:/home/workspace"
+  working_dir: /usr/src/olorenautoml/docs/_build/html
+  command: python3 -m http.server 1235

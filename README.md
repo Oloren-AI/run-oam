@@ -61,3 +61,16 @@ Note the addition of `--rm bash`
 ### Adding on with your own code
 
 This is pretty simple. Just use one of the above methods (bash or jupyter notebook), in a folder that contains the new code you want to add on. It will be made available in bash and jupyterlab/jupyter notebook when you run it. These modules can import and use olorenautoml without any issues.
+
+### View Docs
+
+```yaml
+docs:
+  image: oam-release:docs
+  ports:
+    - 1235:1235
+  volumes:
+    - ".:/home/workspace"
+  working_dir: /usr/src/olorenautoml/docs/_build/html
+  command: python3 -m http.server 1235
+```
