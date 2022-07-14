@@ -16,7 +16,7 @@ jupyter:
   ports:
     - 8888:8888
   volumes:
-    - ".:/home/notebook"
+		- ".:/home/notebook"
   command: >
     bash -c "pip install jupyter
     && cd /home/notebook
@@ -33,7 +33,7 @@ jupyter:
   ports:
     - 8888:8888
   volumes:
-    - ".:/home/notebook"
+		- ".:/home/notebook"
   command: >
     bash -c "pip install jupyter
     && cd /home/notebook
@@ -64,13 +64,13 @@ This is pretty simple. Just use one of the above methods (bash or jupyter notebo
 
 ### View Docs
 
+This compose file starts a http server on your machine that displays the OlorenAutoML docs. We recommend running this with `docker-compose -f docs.yml up -d` the added `-d` will allow this command to run in the background.
+
 ```yaml
 docs:
-  image: oam-release:docs
+  image: oam-release:latest
   ports:
     - 1235:1235
-  volumes:
-    - ".:/home/workspace"
   working_dir: /usr/src/olorenautoml/docs/_build/html
   command: python3 -m http.server 1235
 ```
