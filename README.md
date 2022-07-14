@@ -16,7 +16,7 @@ jupyter:
   ports:
     - 8888:8888
   volumes:
-		- ".:/home/notebook"
+    - ".:/home/notebook"
   command: >
     bash -c "pip install jupyter
     && cd /home/notebook
@@ -33,7 +33,7 @@ jupyter:
   ports:
     - 8888:8888
   volumes:
-		- ".:/home/notebook"
+    - ".:/home/notebook"
   command: >
     bash -c "pip install jupyter
     && cd /home/notebook
