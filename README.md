@@ -5,7 +5,7 @@ Once the OAM docker image is installed, we will rely mostly on docker compose as
 To use docker compose, we create a .yml file specifying how we will be using docker, then run the jobs with the following command:
 
 ```bash
-docker compose -f [path to yml file] up
+docker-compose -f [path to yml file] up
 ```
 
 ### Running Jupyter Notebook/Jupyter Lab
